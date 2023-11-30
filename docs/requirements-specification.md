@@ -22,3 +22,62 @@ The use cases fulfill the goals in the following way:
 | UC6 | |
 
 The goals G10-G12 are currently not addressed by any use case.
+
+## Usage Model
+
+_This content item details the use case overview of the system vision in its use cases. We distinguish services and use cases (or user stories respectively). Both concepts are means to describe (black box) system behaviour. Use cases describe sequences of interaction between actors (realising user groups) and the system as a whole._
+
+### UC1: Recording Evidence
+
+| UC1 | Recording Evidence |
+|---|---|
+| Actors | Researcher |
+| Pre-conditions | The researcher is authenticated and has a valid, digital evidence |
+| End conditions (success) | The evidence is recorded and associated with the researcher |
+| End conditions (failure) | The evidence is either not recorded or not associated with the researcher |
+| Steps | 1. If a researcher presses "Add evidence", the system opens a dialog window with a dropdown menu for the evidence type. |
+| | 2. When the researcher selects the evidence type, the dialog window is populated with input fields of the respective attributes of the evidence type. |
+| | 3. When all mandatory input fields contain valid values and the the researcher presses "Confirm", the system records the evidence and associates it with the researcher. |
+| Extensions | 2.b. If the researcher presses "Report missing evidence", the system forwards them to an issue reporting interface. |
+
+### UC2: Check capability evidence
+
+| UC2 | Check Capability Evidence 
+|---|---|
+| Actors | User of the system (Funding Agency or Practitioner) |
+| Pre-conditions | The system currently visualizes at least one researcher and their overall ranking in regard to a capability |
+| End conditions (success) | The user sees a list of items providing evidence for the capability. |
+| Steps | 1. If a user clicks on the capability ranking of a researcher, a window lists the top five most recent items of evidence for that capability. |
+| Extensions | 2. If a user clicks "expand", the window shows all items of evidence for that capability. |
+| | 1.b. If the administrator configured to show the strongest instead of the most recent items of evidence and a user clicks on the capability ranking of a researcher, a window lists the top five strongest items of evidence for that capability. |
+
+### UC3: Get capability overview
+
+### UC4: Identify capability gap
+
+| UC4 | Identify Capability Gaps
+|---|---|
+| Actors | Lead Researcher |
+| Pre-conditions | - The system contains a comprehensive list of current capabilities of the research group members. |
+|  |  - The lead researcher has access to the system and understands the group's capability needs.|
+| End conditions (success) | The lead researcher identifies areas where the group lacks expertise or skills. |
+| Steps | 1. The lead researcher accesses the Capability Matrix System. |
+|       | 2. The system presents an overview of the current capabilities of the group members. |
+|       | 3. The lead researcher reviews the capabilities and identifies gaps in expertise or skills. |
+|       | 4. The system may suggest potential areas for improvement based on the existing capability data. |
+| Extensions | 3.a If a capability gap is identified, the system can suggest potential external collaborators or areas for targeted hiring. |
+|            | 3.b The lead researcher can set alerts or reminders for periodic capability assessments to monitor progress in filling the gaps. |
+
+### UC5: Find an expert in a field
+
+| UC5 | Find an expert in a field
+|---|---|
+| Actors | Practitioners or Students |
+| Pre-conditions | - The system contains a list of researchers with their capabilities. |
+|  |  - The user has a set of capabilities to use for looking up researchers.|
+| End conditions (success) | The user sees a list of matched researchers with their capabilities. |
+| Steps | 1. The user type in a set of capabilities separated by a space. |
+|       | 2. A list of researchers that have at least one of the capabilities entered by the user is shown. |
+| Extensions | 2.b If the user clicks on the researcher, a new window opens showing the researcher's profile. |
+
+### UC6: Organizing capabilities
